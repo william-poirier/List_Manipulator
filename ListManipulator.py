@@ -49,6 +49,11 @@ class ListManipulatorTest(unittest.TestCase):
         manipulator = ListManipulator(_list)
         self.assertEqual(manipulator.max(), 12.7)
 
+        # Create a list, including strings as well, see if it'll work
+        _list = [3, 84.2, -25, "Hello", 55.1, 10]
+        manipulator = ListManipulator(_list)
+        self.assertEqual(manipulator.max(), 84.2)
+
     def testMin(self):
         # Create a list and check the min of the list (will min() return 1?  It should)
         _list = [1, 2, 3, 4]
@@ -59,6 +64,11 @@ class ListManipulatorTest(unittest.TestCase):
         _list = [-2, 2.784, 8952.5, 1, -10.1]
         manipulator = ListManipulator(_list)
         self.assertEqual(manipulator.min(), -10.1)
+
+        # Add strings into the mix
+        _list = [-10, 5.3, "Code test", 33, -156]
+        manipulator = ListManipulator(_list)
+        self.assertEqual(manipulator.min(), -156)
 
     def testRemove(self):
         # Create a list and check to see if the index was removed correctly
