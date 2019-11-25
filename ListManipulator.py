@@ -77,6 +77,18 @@ class ListManipulatorTest(unittest.TestCase):
         manipulator.remove(2)
         self.assertEqual(2 in manipulator.list, False)
 
+        # Create a list, and try to remove something that isn't in the list at all
+        _list = [1, 3, 4]
+        manipulator = ListManipulator(_list)
+        manipulator.remove(2)
+        self.assertEqual(2 in manipulator.list, False)
+
+        # Include other value types in the list
+        _list = [1, 2, 3, 4, "Hello!", -10, 2.54, "Hi!!", -25.29846]
+        manipulator = ListManipulator(_list)
+        manipulator.remove("Hi!!")
+        self.assertEqual("Hi!!" in manipulator.list, False)
+
 
 # Time to test everything
 unittest.main()
