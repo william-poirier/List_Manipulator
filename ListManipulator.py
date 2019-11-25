@@ -37,7 +37,7 @@ class ListManipulator:
             removed_count += 1
 
 
-class ListManipulatorTest(unittest.TestCase):
+class testListManipulator(unittest.TestCase):
     def testMax(self):
         # Create a list and check the max of the list (will max() return 4?  It should)
         _list = [1, 2, 3, 4]
