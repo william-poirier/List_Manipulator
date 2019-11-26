@@ -1,5 +1,11 @@
 import unittest
 
+# William Poirier
+# 11/25/19
+# Software Development Fundamentals
+
+# Git Repository - https://github.com/william-poirier/List_Manipulator
+
 
 class ListManipulator:
     def __init__(self, list):
